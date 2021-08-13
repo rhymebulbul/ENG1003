@@ -1,0 +1,107 @@
+  <!-- Same page format as view html page, can be without map. -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />  
+    <!-- Uses a header that contracts as the page scrolls down. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .mdl-layout__header-row {
+            padding: 0 16px 0 16px;
+        }
+        a {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="icon" href="img/favicon.png">
+  </head>
+  
+  
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <img src="img/logo.png" class="center" width="480" 
+              height="50" style="vertical-align:middle;margin:0px 50px">
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation. We hide it in small screens. -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <a class="mdl-navigation__link" href="">Choose language</a>
+              <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="search">
+         </div>
+              </nav>
+          </div>
+        
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title" id = "userProfile"></span>
+          <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="homepage.html">Home page</a>
+              <a class="mdl-navigation__link" href="viewall.html">View All Bookings</a>
+              </nav>
+        </div>
+        <main class="mdl-layout__content">
+          <div class="page-content">
+              <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col">
+                      <h2> 
+                          Booking Summary:
+                      </h2>
+                    </div>
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <h4>Date and Time:</h4>
+                        <h6 id="dateTime"></h6>
+                    </div>
+                </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+            <h4>Route:</h4>
+            <h6 id="route"></h6>
+        </div>
+    </div>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+        <h4>Number of Stops:</h4>
+        <h6 id="numberOfStops"></h6>
+    </div>
+</div>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+        <h4>Fare:</h4>
+        <h6 id="fare"></h6>
+    </div>
+</div>
+
+<div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    onclick="checkConfirm()">Confirm</button>
+
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    onclick="returnMainPage()">Cancel</button>
+</div>
+</main>
+</div>
+
+<script src="js/Shared.js"></script>
+<script src="js/Main.js"></script>
+<script src="js/BookingInfo.js"></script>
+<script src="js/ConfirmInfo.js"></script>
+</body>
+</html>
